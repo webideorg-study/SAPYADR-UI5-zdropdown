@@ -1,0 +1,15 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:c="sap.ui.core" controllerName="zdropdown.controller.List" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Select id="select" showSecondaryValues="true" items="{path: '/ProductSet', sorter: {path: 'ProductID'}}" change="GetSelectItem">
+						<items>
+							<c:ListItem key="{ProductID}" text="{Name}" additionalText="{Price} {CurrencyCode}"/>
+						</items>
+					</Select>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
